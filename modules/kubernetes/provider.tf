@@ -1,7 +1,5 @@
 # Configure the DigitalOcean Provider
-provider "digitalocean" {
-  token = "${var.do_token}"
-}
+provider "digitalocean" {}
 
 provider "kubernetes" {
   host = "${digitalocean_kubernetes_cluster.homero.endpoint}"

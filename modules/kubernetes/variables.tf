@@ -1,5 +1,4 @@
 // digital ocean variables
-variable "do_token" {}
 variable "do_image" {}
 variable "do_region" {}
 variable "do_size" {}

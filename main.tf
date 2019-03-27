@@ -7,6 +7,8 @@
 // https://medium.com/devopslinks/the-missing-introduction-to-containerization-de1fbb73efc5
 // 
 // By...
+
+// What do I need?
 //
 // a) provision a k8s cluster
 // b) create a deployment/service-loadBalancer in k8s
@@ -24,7 +26,6 @@ module "kubernetes" {
     do_name = "homero"
     do_region = "ams3"
     do_size = "s-1vcpu-2gb"
-    do_token = ""
     do_tags = ["homero", "dev"]
     
     // Container to be deployed. Please note is using hub.docker.com as source
