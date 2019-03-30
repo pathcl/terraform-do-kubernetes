@@ -23,11 +23,11 @@ plan:  ## Show what terraform thinks it will do
 
 all: lab dev testing acc prod
 
-lab:	## Deploy lab cluster
+homero:	## Deploy lab cluster
 	@terraform init
 	@terraform apply -auto-approve -target module.kubernetes
 
-destroylab:	## Deploy lab cluster
+destroyhomero:	## Deploy lab cluster
 	@terraform init
 	@terraform destroy -target module.kubernetes
 

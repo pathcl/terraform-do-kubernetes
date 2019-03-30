@@ -29,7 +29,7 @@ module "kubernetes" {
     do_tags = ["homero", "dev"]
     
     // Container to be deployed. Please note is using hub.docker.com as source
-    container_image = "pathcl/goworld:0.0.1"
+    container_image = "pathcl/goworld:0.0.5"
     container_port = "8080"
 
     // Domain record exposed
