@@ -11,6 +11,7 @@ This module will take you from nothing to a usable cluster in a less than 5 minu
 - In this case I created a terraform module in which you can just change 2 lines and launch your app in a managed k8s cluster for 20usd a month.
 
     container_image = "pathcl/goworld:0.0.5"
+
     container_port = "8080"
 
 ## Requirements
@@ -38,6 +39,7 @@ This module will take you from nothing to a usable cluster in a less than 5 minu
 - Ok this is too boring for you. I want it all.
 
     $ export DIGITALOCEAN_TOKEN=toomuchsecurityhere
+
     $ make all
 
 If you want to deploy prometheus through module 'prometheus' you'll need the following dependencies.
