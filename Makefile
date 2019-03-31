@@ -35,10 +35,10 @@ destroyprom:	## Deploy prometheus server
 	@terraform destroy -target module.prometheus
 
 homero: ## display homero! only tested on os x
-	@open http://k8s.sanmartin.dev/homerosimpson
+	@open http://k8s.sanmartin.dev/homerosimpson; sleep 5
 
 covilha: ## display hour in covilha city
-	@open http://k8s.sanmartin.dev/covilha
+	@open http://k8s.sanmartin.dev/covilha; sleep 5
 
 prom: ## display prometheus
 	@open http://prom.sanmartin.dev:9090
