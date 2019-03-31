@@ -17,7 +17,7 @@ init: ## Downloads providers for terraform
 plan:  ## Show what terraform thinks it will do
 	@terraform plan
 
-all: kub prometheus
+all: kub prometheus homero covilha prom
 
 kub:	## Deploy kubernetes cluster
 	@terraform init
@@ -36,6 +36,12 @@ destroyprom:	## Deploy prometheus server
 
 homero: ## display homero! only tested on os x
 	@open http://`dig +short homero.dev @ns1.digitalocean.com`/homerosimpson
+
+covilha: ## display hour in covilha city
+	@open http://`dig +short homero.dev @ns1.digitalocean.com`/covilha
+
+prom: ## display prometheus
+	@open http://`dig +short prom.homero.dev @ns1.digitalocean.com`:9090
 
 clean: ## deletes everything
 	@terraform destroy -auto-approve

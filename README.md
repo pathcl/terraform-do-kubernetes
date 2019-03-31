@@ -21,6 +21,7 @@ This module will take you from nothing to a usable cluster in a less than 5 minu
     You need to create an s3 bucket since we'll have remote state for terraform.
     More info here: https://www.terraform.io/docs/state/remote.html
 
+- SSH key on $HOME/.ssh/ in order to install prometheus through ansible
 
 - Docker image of your app. By default it will expose port '8080' through port 80 (internet) of a load balancer. If curious this is defined by two variables inside 'main.tf' (container_image, container_port).
 
