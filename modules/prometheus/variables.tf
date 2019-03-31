@@ -8,4 +8,5 @@ variable "do_tags" {
 }
 // prometheus settings
 variable "prometheus_release" {}
+variable "dns_domain" {}
 variable "dns_record" {}

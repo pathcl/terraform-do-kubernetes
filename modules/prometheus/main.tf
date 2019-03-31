@@ -14,9 +14,12 @@ resource "digitalocean_droplet" "prometheus" {
   ssh_keys = ["${digitalocean_ssh_key.default.fingerprint}"]
 }
 
-resource "digitalocean_domain" "prometheus" {
+resource "digitalocean_record" "prometheus" {
+  domain     = "${var.dns_domain}"
   name       = "${var.dns_record}"
-  ip_address = "${digitalocean_droplet.prometheus.ipv4_address}"
+  value      = "${digitalocean_droplet.prometheus.ipv4_address}"
+  type       = "A"
+  ttl        = "300"
 }
 
 // manages the prometheus installation through an ansible playbook

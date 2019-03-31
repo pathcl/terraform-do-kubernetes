@@ -81,7 +81,10 @@ resource "kubernetes_service" "homero" {
   }
 }
 
-resource "digitalocean_domain" "homero" {
+resource "digitalocean_record" "homero" {
+  domain     = "${var.dns_domain}"
   name       = "${var.dns_record}"
-  ip_address = "${kubernetes_service.homero.load_balancer_ingress.0.ip}"
+  value      = "${kubernetes_service.homero.load_balancer_ingress.0.ip}"
+  type       = "A"
+  ttl        = "300"
 }

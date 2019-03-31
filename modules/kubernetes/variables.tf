@@ -12,4 +12,5 @@ variable "do_kubernetes_version" {}
 // app settings
 variable "container_image" {}
 variable "container_port" {}
+variable "dns_domain" {}
 variable "dns_record" {}
