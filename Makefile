@@ -4,30 +4,38 @@
 CURRENT_FOLDER=$(shell basename "$$(pwd)")
 DIR := ${CURDIR}
 
-install: init plan apply ## Create plan and apply it
-
-uninstall: destroy 	## Destroy everything
-
-help: doc 		
+help: doc
 
 config: init 		## install all dependencies you need
 
-doc: 
+doc:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 init: ## Downloads providers for terraform
 	@terraform init
 
 plan:  ## Show what terraform thinks it will do
-	@terraform plan 
+	@terraform plan
 
-all: lab dev testing acc prod
+all: kub prometheus
 
-homero:	## Deploy lab cluster
+kub:	## Deploy kubernetes cluster
 	@terraform init
 	@terraform apply -auto-approve -target module.kubernetes
 
-destroyhomero:	## Deploy lab cluster
+destroykub:	## Destroy kubernetes cluster
 	@terraform init
 	@terraform destroy -target module.kubernetes
 
+prometheus: ## Create prometheus server
+	@terraform apply -auto-approve -target module.prometheus
+
+destroyprom:	## Deploy prometheus server
+	@terraform init
+	@terraform destroy -target module.prometheus
+
+homero: ## display homero! only tested on os x
+	@open http://`dig +short homero.dev @ns1.digitalocean.com`/homerosimpson
+
+clean: ## deletes everything
+	@terraform destroy -auto-approve

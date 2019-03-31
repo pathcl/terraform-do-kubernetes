@@ -3,9 +3,9 @@
 // container_image = "pathcl/goworld:0.0.1"
 // container_port = "8080"
 
-// What is a container? 
+// What is a container?
 // https://medium.com/devopslinks/the-missing-introduction-to-containerization-de1fbb73efc5
-// 
+//
 // By...
 
 // What do I need?
@@ -27,11 +27,30 @@ module "kubernetes" {
     do_region = "ams3"
     do_size = "s-1vcpu-2gb"
     do_tags = ["homero", "dev"]
-    
+
     // Container to be deployed. Please note is using hub.docker.com as source
-    container_image = "pathcl/goworld:0.0.5"
+    container_image = "pathcl/goworld:0.0.9"
     container_port = "8080"
 
     // Domain record exposed
     dns_record = "homero.dev"
+}
+
+module "prometheus" {
+    // Define prometheus
+    source = "./modules/prometheus"
+
+    // Digital ocean settings
+    do_image = "ubuntu-18-04-x64"
+    do_name = "prometheus"
+    do_region = "ams3"
+    do_size = "s-1vcpu-2gb"
+    do_tags = ["prometheus", "dev"]
+
+    // TODO: Prometheus release
+    // wouldnt be nice to control also our release?
+    prometheus_release = "0.0.1"
+
+    // Domain record exposed
+    dns_record = "prom.homero.dev"
 }

@@ -1,1 +1,3 @@
 .terraform/*
+*.retry
+hosts.ini
