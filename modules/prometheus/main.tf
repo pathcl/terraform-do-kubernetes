@@ -37,7 +37,7 @@ resource "null_resource" "prometheus-server" {
   // improve control over scraping targets!
 
   provisioner "local-exec" {
-    command = "ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -u root ${path.module}/playbooks/deploy-prometheus.yaml -i ${path.module}/hosts.ini --extra-vars target=homero.dev:9100"
+    command = "ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -u root ${path.module}/playbooks/deploy-prometheus.yaml -i ${path.module}/hosts.ini --extra-vars target=k8s.sanmartin.dev:9100"
   }
 }
 

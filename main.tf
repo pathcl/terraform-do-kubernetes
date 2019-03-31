@@ -33,7 +33,7 @@ module "kubernetes" {
     container_port = "8080"
 
     // Domain record exposed
-    dns_record = "homero.dev"
+    dns_record = "k8s.sanmartin.dev"
 }
 
 module "prometheus" {
@@ -52,5 +52,5 @@ module "prometheus" {
     prometheus_release = "0.0.1"
 
     // Domain record exposed
-    dns_record = "prom.homero.dev"
+    dns_record = "prom.sanmartin.dev"
 }

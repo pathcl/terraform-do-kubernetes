@@ -49,7 +49,7 @@ If you want to deploy prometheus through module 'prometheus' you'll need the fol
 - jmespath
     - pip install jmespath
 
-By default it will scrape metrics from homero.dev:9100. If you want to change this please go to line 40 of modules/prometheus/main.tf
+By default it will scrape metrics from k8s.sanmartin.dev:9100. If you want to change this please go to line 40 of modules/prometheus/main.tf
 
 
 ## Final result

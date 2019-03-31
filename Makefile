@@ -35,13 +35,13 @@ destroyprom:	## Deploy prometheus server
 	@terraform destroy -target module.prometheus
 
 homero: ## display homero! only tested on os x
-	@open http://`dig +short homero.dev @ns1.digitalocean.com`/homerosimpson
+	@open http://k8s.sanmartin.dev/homerosimpson
 
 covilha: ## display hour in covilha city
-	@open http://`dig +short homero.dev @ns1.digitalocean.com`/covilha
+	@open http://k8s.sanmartin.dev/covilha
 
 prom: ## display prometheus
-	@open http://`dig +short prom.homero.dev @ns1.digitalocean.com`:9090
+	@open http://prom.sanmartin.dev:9090
 
 clean: ## deletes everything
 	@terraform destroy -auto-approve
