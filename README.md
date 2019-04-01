@@ -16,7 +16,7 @@ This module will take you from nothing to a usable cluster in a less than 5 minu
 
 ## Final result
 
-If everything went ok you should have your app deployed and available from the internet. Take a look at the gif carefully. I will start from zero as if I was doing it from first time. [HERE](https://youtu.be/4gpknNA9gG4)
+If everything went ok you should have your app deployed and available from the internet. Take a look at the video carefully. I will start from zero as if I was doing it from first time. [HERE](https://youtu.be/4gpknNA9gG4)
 
 ## Requirements
 
