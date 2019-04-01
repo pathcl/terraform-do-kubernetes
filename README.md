@@ -58,11 +58,8 @@ If you want to deploy prometheus through module 'prometheus' you'll need the fol
 By default it will scrape metrics from k8s.sanmartin.dev:9100. If you want to change this please go to line 40 of modules/prometheus/main.tf
 
 
-## Final result
-
-If everything went ok you should have your app deployed and available from the internet. Take a look at the gif carefully. I will start from zero as if I was doing it from first time. [HERE](https://youtu.be/4gpknNA9gG4)
-
 ## TODO:
 
 Dockerfile
+
 Proper instrumentation of homero
