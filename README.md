@@ -14,6 +14,10 @@ This module will take you from nothing to a usable cluster in a less than 5 minu
 
     container_port = "8080"
 
+## Final result
+
+If everything went ok you should have your app deployed and available from the internet. Take a look at the gif carefully. I will start from zero as if I was doing it from first time. [HERE](https://youtu.be/4gpknNA9gG4)
+
 ## Requirements
 
 - Aws credentials for terraform s3 remote state. Help here https://www.terraform.io/docs/providers/aws/index.html .I'm assuming is more likely you have an AWS account rather than a DO.
