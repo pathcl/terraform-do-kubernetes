@@ -57,6 +57,22 @@ If you want to deploy prometheus through module 'prometheus' you'll need the fol
 
 By default it will scrape metrics from k8s.sanmartin.dev:9100. If you want to change this please go to line 40 of modules/prometheus/main.tf
 
+## Usage
+
+If everything is ok you should be able to do:
+
+### Kubernetes && web app
+
+    make kub
+
+### Prometheus server
+
+    make prometheus
+
+### Clean everything
+
+    make clean
+
 
 ## TODO:
 
